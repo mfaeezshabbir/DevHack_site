@@ -3,13 +3,13 @@ import defaultImage from './assets/images/default.png';
 const CONFIG = {
   name: 'DevHack IUB',
 
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://devhackiub.netlify.app/',
   basePathname: '/',
   trailingSlash: false,
 
   title: 'DevHack IUB',
   description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+    'DevHack is a community of tech enthusiasts and innovators dedicated to empowering students to unlock their potential in the world of technology. Through a range of workshops, mentorship programs, and hands-on training, we equip students with the necessary skills and knowledge to succeed in the ever-evolving field of IT. Join our community and take charge of your future today!',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"

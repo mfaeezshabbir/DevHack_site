@@ -3,7 +3,7 @@ import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
+// import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -22,11 +22,11 @@ const meta = {
 
 <Layout {meta}>
   <!-- Hero Widget ******************* -->
-
+  
+  <!-- callToAction2={{ text: 'Learn more', href: '#features' }} -->
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    callToAction={{ text: 'Get Registered', href: 'https://forms.gle/hcbYiydGVwcUAANc9' }}
+    image={{ src: import('~/assets/images/hero.jpg'), alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">DevHack</Fragment>
 
@@ -35,11 +35,12 @@ const meta = {
         <span class="font-semibold"> Building a Community of Tech Enthusiasts and Innovators</span>
       </span>
     </Fragment>
+
   </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note />
+  <!-- <Note /> -->
 
   <!-- Features Widget *************** -->
 
