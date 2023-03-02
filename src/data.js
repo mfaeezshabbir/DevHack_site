@@ -33,7 +33,7 @@ export const footerData = {
     // },
   ],
   secondaryLinks: [
-    { text: 'Code of Conduct', href: getPermalink('/terms') },
+    { text: 'Code of Conduct', href: getPermalink('/code-of-conduct') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
     { text: 'Team', href: getPermalink('/team') },
     { text: 'Blog', href: getBlogPermalink() },
