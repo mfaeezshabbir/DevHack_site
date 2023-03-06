@@ -16,7 +16,7 @@
   }
 
   .bg-dark {
-    @apply bg-slate-900;
+    @apply bg-[#354353];
   }
 
   
