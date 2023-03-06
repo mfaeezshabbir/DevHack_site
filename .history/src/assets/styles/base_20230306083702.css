@@ -64,21 +64,22 @@
 :root::-webkit-scrollbar{
  /* display: none; */
 
-}
-
-/* width */
+}/* width */
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 3px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
+  background: #b40370;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: red;
-  border-radius: 10px;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
