@@ -1,0 +1,11 @@
+---
+import ContactForm from "./contactus";
+import Layout from '~/layouts/BaseLayout.astro';
+import { getHomePermalink } from '~/utils/permalinks';
+
+const title = `Contact Us`;
+---
+
+<Layout meta={{ title }}>
+          <ContactForm/>
+</Layout>

@@ -22,5 +22,8 @@
     "**/.DS_Store": false,
     "**/Thumbs.db": false
   },
-  "explorerExclude.backup": {}
+  "explorerExclude.backup": {},
+  "cSpell.words": [
+    "contactus"
+  ]
 }

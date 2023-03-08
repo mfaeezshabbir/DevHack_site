@@ -1,0 +1,63 @@
+---
+
+import Layout from '~/layouts/BaseLayout.astro';
+import { getHomePermalink } from '~/utils/permalinks';
+
+import React from "react";
+
+function ContactForm() {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "d1574070-b50a-4c18-aa74-f395c6216449");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
+  };
+
+  return (
+    );
+  }
+  
+  // export default ContactForm;
+  
+  const title = `Contact Us`;
+  ---
+  
+  <Layout meta={{ title }}>
+    <form onSubmit={onSubmit}>
+      <input type="text" name="name"/>
+      <input type="email" name="email"/>
+      <textarea name="message"></textarea>
+      <button type="submit">Submit Form</button>
+    </form>
+  <section class="flex items-center h-full p-16">
+    <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+      <div class="max-w-md text-center">
+        <h2 class="mb-8 font-bold text-9xl">
+          <span class="sr-only">Error</span>
+          <span class="text-primary">404</span>
+        </h2>
+        <p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
+        <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
+          But dont worry, you can find plenty of other things on our homepage.
+        </p>
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Back to homepage</a>
+      </div>
+    </div>
+  </section>
+</Layout>

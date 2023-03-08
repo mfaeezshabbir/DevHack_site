@@ -1,0 +1,126 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+// import Note from '~/components/widgets/Note.astro';
+// import Features from '~/components/widgets/Features.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
+// import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+// import LatestPosts from '~/components/blog/LatestPosts.astro';
+// import FAQs from '~/components/widgets/FAQs.astro';
+// import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+
+  <!-- callToAction2={{ text: 'Learn more', href: '#features' }} -->
+  <!-- callToAction2={{ text: 'Join Us', href: '#callToAction' }} -->
+  <!-- image={{ src: import('~/assets/images/hero.jpg'), alt: 'DevHack Hero Image' }} -->
+  <Hero
+    callToAction2={{ text: 'Join Us', href: '/contactus' }}
+  >
+    <Fragment slot="title">DevHack</Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="sm:inline">
+        <span class="text-base">
+          Spreading tech to everyone.</span
+        >
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <!-- <Note /> -->
+
+  
+
+  <Content
+    title="How DevHack IUB Can Help You Grow Your Tech Skills and Career?"
+    items={[
+      {
+        title: 'Workshops',
+        description: '',
+      },
+      {
+        title: 'Hackathons',
+        description: '',
+      },
+      {
+        title: 'Networking Opportunities',
+        description: '',
+      },
+      {
+        title: 'Community of Tech Enthusiasts',
+        description: '',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/DevHack.webp'),
+      alt: 'Colorful Image',
+    }}
+  >
+    <!-- <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"></h3>
+    </Fragment> -->
+  </Content>
+
+  
+  <!-- HighlightedPosts Widget ******* -->
+
+  <!-- <LatestPosts
+    title="Find out more content in our Blog"
+    information={`The blog is used to display AstroWind documentation.
+			Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
+			Astro is a very interesting technology. Thanks.
+		`}
+    postIds={[
+      'get-started-website-with-astro-tailwind-css.md',
+      'how-to-customize-astrowind-to-your-brand.md',
+      'useful-resources-to-create-websites.md',
+      'astrowind-template-in-depth.md',
+    ]}
+  /> -->
+
+  
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    items={[
+      { name: 'Downloads', value: '132K' },
+      { name: 'Stars', value: '24.8K' },
+      { name: 'Forks', value: '10.3K' },
+      { name: 'Users', value: '48.4K' },
+    ]}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    callToAction={{
+      text: 'Become A Member',
+      // href: 'https://forms.gle/hcbYiydGVwcUAANc9',
+      href: '/joiningForm',
+      // icon: 'tabler:community',
+    }}
+  >
+    <Fragment slot="title">
+      Become a part of our community
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      
+    </Fragment>
+  </CallToAction>
+</Layout>
